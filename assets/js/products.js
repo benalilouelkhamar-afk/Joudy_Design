@@ -50,3 +50,18 @@ const PRODUCTS = [
   { id: "ivoire",    name: "Takchita Ivoire",   cat: "ceinture", fabric: "Crêpe ivoire", detail: "Broderie dorée, ceinture assortie", price: null, isNew: false },
   { id: "nude",      name: "Takchita Nude",     cat: "ceinture", fabric: "Crêpe beige rosé", detail: "Broderie dorée, ceinture assortie", price: null, isNew: false },
 ];
+
+/* Photos supplémentaires par modèle : assets/img/gallery/<id>-2.jpg, <id>-3.jpg …
+   Indiquez ici le nombre de photos supplémentaires. */
+const GALLERY = {
+  aquarelle: 2, sahara: 2, violette: 2, ambre: 2, taupe: 2,
+  lilas: 2, mandarine: 2, mosaique: 2, "noir-dore": 2, rose: 1,
+};
+
+/* Guide des tailles (cm) — [À VÉRIFIER avec l’atelier] */
+const SIZE_GUIDE = [
+  { size: "S",  chest: "84–90",   hips: "90–96",   length: "140" },
+  { size: "M",  chest: "90–96",   hips: "96–102",  length: "142" },
+  { size: "L",  chest: "96–104",  hips: "102–110", length: "144" },
+  { size: "XL", chest: "104–112", hips: "110–118", length: "146" },
+];
