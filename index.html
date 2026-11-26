@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joudy Design — Kaftans & Takchitas faits main au Maroc</title>
+  <meta name="description" content="Joudy Design, créatrice marocaine : kaftans et takchitas en satin, crêpe et velours, finitions sfifa et 3a9ad faites main. Commande sur WhatsApp, livraison partout au Maroc.">
+  <meta property="og:title" content="Joudy Design — Moroccan Fashion Designer">
+  <meta property="og:description" content="Kaftans et takchitas faits main. Livraison partout au Maroc.">
+  <meta property="og:image" content="assets/img/looks/lilas.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="announce">
+    <div class="announce__track">
+      <span>Livraison partout au Maroc</span><span aria-hidden="true">✦</span>
+      <span>Paiement à la livraison</span><span aria-hidden="true">✦</span>
+      <span>Pièces faites main</span><span aria-hidden="true">✦</span>
+      <span>Commande sur WhatsApp</span>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <button class="icon-btn header__burger" id="menuOpen" aria-label="Ouvrir le menu" aria-controls="mobileNav" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+
+      <nav class="nav nav--left" aria-label="Navigation principale">
+        <a href="#nouveautes">Nouveautés</a>
+        <a href="#collection">Collection</a>
+        <a href="#maison">La maison</a>
+      </nav>
+
+      <a href="#top" class="logo" aria-label="Joudy Design — accueil">
+        <span class="logo__mark">Joudy</span>
+        <span class="logo__sub">Design</span>
+      </a>
+
+      <div class="header__right">
+        <nav class="nav" aria-label="Navigation secondaire">
+          <a href="#commande">Commander</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <button class="icon-btn cart-btn" id="cartOpen" aria-label="Ouvrir le panier">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <div class="mobile-nav__panel">
+      <button class="icon-btn mobile-nav__close" id="menuClose" aria-label="Fermer le menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <a href="#nouveautes">Nouveautés</a>
+      <a href="#collection">Collection</a>
+      <a href="#maison">La maison</a>
+      <a href="#commande">Commander</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text reveal">
+          <p class="eyebrow">Collection automne–hiver 2026</p>
+          <h1 class="hero__title">L’art du kaftan,<br><em>cousu à la main.</em></h1>
+          <p class="hero__lead">Satin, crêpe et velours sublimés par la sfifa et le 3a9ad. Des pièces pensées pour chaque occasion, créées au Maroc par Joudy Design.</p>
+          <div class="hero__ctas">
+            <a href="#collection" class="btn btn--dark">Découvrir la collection</a>
+            <a href="#" class="btn btn--ghost js-wa" data-msg="Bonjour Joudy Design, je souhaite avoir plus d’informations sur vos modèles.">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 12 20a8 8 0 0 1-4-1.1L4 20z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+          <dl class="hero__stats">
+            <div><dt>15K+</dt><dd>clientes & abonnées</dd></div>
+            <div><dt>300+</dt><dd>créations publiées</dd></div>
+            <div><dt>100%</dt><dd>fait main au Maroc</dd></div>
+          </dl>
+        </div>
+        <div class="hero__visual reveal">
+          <figure class="hero__main">
+            <img src="assets/img/looks/lilas.jpg" alt="Mannequin portant le kaftan Lilas en satin imprimé léopard" fetchpriority="high">
+          </figure>
+          <figure class="hero__side">
+            <img src="assets/img/looks/zitoun.jpg" alt="Kaftan Zitoun en satin vert et or">
+          </figure>
+          <div class="hero__badge">
+            <span>Nouvelle</span>
+            <strong>collection</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALEURS -->
+    <section class="values" aria-label="Nos engagements">
+      <div class="container values__grid">
+        <div class="value">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg>
+          <div><strong>Finitions artisanales</strong><span>Sfifa, 3a9ad et broderie</span></div>
+        </div>
+        <div class="value">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>
+          <div><strong>Livraison nationale</strong><span>Partout au Maroc</span></div>
+        </div>
+        <div class="value">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+          <div><strong>Paiement à la livraison</strong><span>Simple et sécurisé</span></div>
+        </div>
+        <div class="value">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12"/><path d="M9 20v-6h6v6"/></svg>
+          <div><strong>Sur mesure</strong><span>Sur demande</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOUVEAUTÉS / LOOKBOOK -->
+    <section class="section" id="nouveautes">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Lookbook</p>
+          <h2 class="section__title">Les nouveautés</h2>
+          <p class="section__lead">Une sélection de nos dernières créations, portées et photographiées à l’atelier.</p>
+        </div>
+        <div class="looks">
+          <article class="look look--tall reveal" data-id="lilas">
+            <img src="assets/img/looks/lilas.jpg" alt="Kaftan Lilas" loading="lazy">
+            <div class="look__info"><span>Satin imprimé</span><h3>Kaftan Lilas</h3><button class="link-btn js-quick" data-id="lilas">Voir le modèle</button></div>
+          </article>
+          <article class="look reveal" data-id="rose">
+            <img src="assets/img/looks/rose.jpg" alt="Kaftan Warda" loading="lazy">
+            <div class="look__info"><span>Satin imprimé floral</span><h3>Kaftan Warda</h3><button class="link-btn js-quick" data-id="rose">Voir le modèle</button></div>
+          </article>
+          <article class="look reveal" data-id="noir-dore">
+            <img src="assets/img/looks/noir.jpg" alt="Kaftan Noir Doré" loading="lazy">
+            <div class="look__info"><span>Satin noir</span><h3>Kaftan Noir Doré</h3><button class="link-btn js-quick" data-id="noir-dore">Voir le modèle</button></div>
+          </article>
+          <article class="look reveal" data-id="taupe">
+            <img src="assets/img/looks/taupe.jpg" alt="Kaftan Taupe" loading="lazy">
+            <div class="look__info"><span>Satin uni</span><h3>Kaftan Taupe</h3><button class="link-btn js-quick" data-id="taupe">Voir le modèle</button></div>
+          </article>
+          <article class="look reveal" data-id="zitoun">
+            <img src="assets/img/looks/zitoun.jpg" alt="Kaftan Zitoun" loading="lazy">
+            <div class="look__info"><span>Satin vert & or</span><h3>Kaftan Zitoun</h3><button class="link-btn js-quick" data-id="zitoun">Voir le modèle</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section class="section section--sand" id="collection">
+      <div class="container">
+        <div class="collection__head reveal">
+          <div>
+            <p class="eyebrow">Boutique</p>
+            <h2 class="section__title">La collection</h2>
+          </div>
+          <div class="collection__tools">
+            <div class="filters" id="filters" role="group" aria-label="Filtrer par catégorie"></div>
+            <label class="sort">
+              <span class="visually-hidden">Trier</span>
+              <select id="sort">
+                <option value="default">Mis en avant</option>
+                <option value="new">Nouveautés d’abord</option>
+                <option value="az">Nom A → Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <p class="collection__count" id="count" aria-live="polite"></p>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- LA MAISON -->
+    <section class="maison" id="maison">
+      <div class="container maison__grid">
+        <div class="maison__imgs reveal">
+          <img src="assets/img/looks/aquarelle.jpg" alt="Détail de sfifa sur un kaftan imprimé" loading="lazy">
+          <img src="assets/img/products/velours.jpg" alt="Détail du galon doré sur un kaftan en velours" loading="lazy">
+        </div>
+        <div class="maison__text reveal">
+          <p class="eyebrow eyebrow--light">La maison</p>
+          <h2>Le savoir-faire marocain, pensé pour la femme d’aujourd’hui.</h2>
+          <p>Joudy Design réinvente le kaftan avec des imprimés audacieux et des matières nobles, tout en restant fidèle aux gestes de la tradition : chaque sfifa est tressée, chaque bouton 3a9ad est posé à la main.</p>
+          <p>[À COMPLÉTER — l’histoire de la créatrice, l’atelier, la ville.]</p>
+          <ul class="maison__list">
+            <li><strong>01</strong><span>Sélection des tissus</span></li>
+            <li><strong>02</strong><span>Coupe & confection</span></li>
+            <li><strong>03</strong><span>Finitions à la main</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMANDER -->
+    <section class="section" id="commande">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Simple & rapide</p>
+          <h2 class="section__title">Comment commander</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal"><span class="step__n">1</span><h3>Choisissez votre modèle</h3><p>Ajoutez une ou plusieurs pièces au panier en précisant la taille.</p></li>
+          <li class="step reveal"><span class="step__n">2</span><h3>Envoyez sur WhatsApp</h3><p>Votre commande est envoyée automatiquement à notre équipe.</p></li>
+          <li class="step reveal"><span class="step__n">3</span><h3>Confirmation</h3><p>Nous confirmons la disponibilité, le prix et le délai avec vous.</p></li>
+          <li class="step reveal"><span class="step__n">4</span><h3>Livraison</h3><p>Recevez votre kaftan chez vous et payez à la livraison.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="insta">
+      <div class="container insta__head reveal">
+        <p class="eyebrow">@joudy___design</p>
+        <h2 class="section__title">Suivez-nous sur Instagram</h2>
+      </div>
+      <div class="insta__strip">
+        <img src="assets/img/products/indigo.jpg" alt="" loading="lazy">
+        <img src="assets/img/products/yaqout.jpg" alt="" loading="lazy">
+        <img src="assets/img/products/opale.jpg" alt="" loading="lazy">
+        <img src="assets/img/products/camel.jpg" alt="" loading="lazy">
+        <img src="assets/img/products/nuit.jpg" alt="" loading="lazy">
+        <img src="assets/img/products/sauge.jpg" alt="" loading="lazy">
+      </div>
+      <div class="container insta__cta">
+        <a class="btn btn--ghost js-insta" href="https://www.instagram.com/joudy___design/" target="_blank" rel="noopener">Voir le compte Instagram</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq">
+        <div class="section__head section__head--left reveal">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2 class="section__title">FAQ</h2>
+          <p class="section__lead">Une autre question ? Écrivez-nous directement sur WhatsApp.</p>
+        </div>
+        <div class="faq__list reveal">
+          <details>
+            <summary>Quels sont les délais de livraison ?</summary>
+            <p>[À COMPLÉTER — ex. 24 à 72 h selon la ville pour les pièces disponibles.]</p>
+          </details>
+          <details>
+            <summary>Comment choisir ma taille ?</summary>
+            <p>Nos kaftans ont une coupe ample. Indiquez votre taille habituelle ; en cas de doute, envoyez-nous vos mesures sur WhatsApp et nous vous conseillerons.</p>
+          </details>
+          <details>
+            <summary>Proposez-vous le sur-mesure ?</summary>
+            <p>Oui, sur demande. Choisissez « Sur mesure » comme taille et nous vous contacterons pour prendre vos mesures.</p>
+          </details>
+          <details>
+            <summary>Quels sont les moyens de paiement ?</summary>
+            <p>Paiement à la livraison partout au Maroc. [À COMPLÉTER — virement, autres moyens.]</p>
+          </details>
+          <details>
+            <summary>Puis-je échanger un article ?</summary>
+            <p>[À COMPLÉTER — conditions d’échange et de retour.]</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <span class="logo__mark">Joudy</span>
+        <span class="logo__sub">Design</span>
+        <p>Moroccan Fashion Designer. Kaftans et takchitas faits main.</p>
+      </div>
+      <div>
+        <h4>Boutique</h4>
+        <a href="#nouveautes">Nouveautés</a>
+        <a href="#collection">Collection</a>
+        <a href="#commande">Commander</a>
+      </div>
+      <div>
+        <h4>Aide</h4>
+        <a href="#faq">FAQ</a>
+        <a href="#faq">Livraison & échanges</a>
+        <a href="#faq">Guide des tailles</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="#" class="js-wa" data-msg="Bonjour Joudy Design !">WhatsApp</a>
+        <a href="https://www.instagram.com/joudy___design/" target="_blank" rel="noopener">Instagram</a>
+        <span>[VILLE], Maroc</span>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Joudy Design. Tous droits réservés.</span>
+    </div>
+  </footer>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a href="#" class="wa-float js-wa" data-msg="Bonjour Joudy Design !" aria-label="Nous écrire sur WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 12 20a8 8 0 0 1-4-1.1L4 20z"/><path d="M9.5 9.5c.3 1.6 1.4 3 3 3.8l1-.9 1.6.7-.3 1.4c-2.6.1-6-3-6.1-5.7l1.4-.4.7 1.6z" class="fill"/></svg>
+  </a>
+
+  <!-- Aperçu produit -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="icon-btn modal__close" data-close aria-label="Fermer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="modal__img"><img id="modalImg" src="" alt=""></div>
+      <div class="modal__body">
+        <p class="eyebrow" id="modalCat"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal__price" id="modalPrice"></p>
+        <p class="modal__desc" id="modalDesc"></p>
+        <fieldset class="sizes">
+          <legend>Taille</legend>
+          <div id="modalSizes"></div>
+        </fieldset>
+        <div class="qty">
+          <span>Quantité</span>
+          <div class="qty__ctrl">
+            <button type="button" id="qtyMinus" aria-label="Diminuer">−</button>
+            <output id="qtyVal">1</output>
+            <button type="button" id="qtyPlus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <div class="modal__ctas">
+          <button class="btn btn--dark btn--block" id="modalAdd">Ajouter au panier</button>
+          <a class="btn btn--ghost btn--block" id="modalWa" href="#" target="_blank" rel="noopener">Commander directement sur WhatsApp</a>
+        </div>
+        <ul class="modal__notes">
+          <li>Livraison partout au Maroc</li>
+          <li>Paiement à la livraison</li>
+          <li>Fait main — légères variations possibles</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panier -->
+  <div class="drawer" id="drawer" hidden>
+    <div class="drawer__backdrop" data-close-cart></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="drawer__head">
+        <h2 id="cartTitle">Votre panier</h2>
+        <button class="icon-btn" data-close-cart aria-label="Fermer le panier">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="drawer__items" id="cartItems"></div>
+      <div class="drawer__foot">
+        <div class="drawer__total"><span>Total estimé</span><strong id="cartTotal">—</strong></div>
+        <label class="field"><span>Nom complet</span><input id="cName" autocomplete="name" placeholder="Votre nom"></label>
+        <label class="field"><span>Ville</span><input id="cCity" autocomplete="address-level2" placeholder="Votre ville"></label>
+        <button class="btn btn--dark btn--block" id="checkout">Envoyer la commande sur WhatsApp</button>
+        <p class="drawer__hint">Le prix final et le délai vous seront confirmés sur WhatsApp.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
