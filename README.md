@@ -5,6 +5,7 @@ Site 100 % statique (HTML, CSS, JavaScript), sans dépendance : il fonctionne en
 
 ## Fonctionnalités
 - **Accueil** (`index.html`) : hero, lookbook, collection, « La maison », étapes de commande, Instagram, FAQ
+- **Formulaire COD (paiement à la livraison)** sur chaque page produit : nom, téléphone (vérifié), ville, adresse, taille, remarque → commande envoyée sur WhatsApp avec une référence, et en option dans Google Sheets ([guide](docs/google-sheets-commandes.md))
 - **Page produit** (`product.html?id=<id>`) : galerie photos (miniatures, zoom au survol, swipe sur mobile), taille + guide des tailles, quantité, ajout au panier, commande WhatsApp directe, description / entretien / livraison / échanges, partage, produits similaires, récemment consultés, barre d’achat fixe sur mobile
 - Catalogue de 29 modèles avec filtres (Imprimés, Unis, Soirée, Ceinturés) et tri
 - Recherche instantanée (nom, couleur, tissu)
@@ -30,11 +31,12 @@ product.html
 
 ## À personnaliser
 1. **Numéro WhatsApp** : `CONFIG.whatsapp` dans `assets/js/products.js` (format `2126XXXXXXXX`).
-2. **Prix** : champ `price` de chaque produit (`null` affiche « Prix sur demande »).
-3. **Textes** marqués `[À COMPLÉTER]` dans `index.html` (histoire de la marque, ville, délais, échanges).
-4. **Photos** : remplacez les fichiers de `assets/img/` par les photos originales en haute qualité (même nom de fichier).
+2. **Commandes dans Google Sheets** (optionnel) : `CONFIG.orderEndpoint`, voir [docs/google-sheets-commandes.md](docs/google-sheets-commandes.md).
+3. **Prix** : champ `price` de chaque produit (`null` affiche « Prix sur demande »).
+4. **Textes** marqués `[À COMPLÉTER]` dans `index.html` (histoire de la marque, ville, délais, échanges).
+5. **Photos** : remplacez les fichiers de `assets/img/` par les photos originales en haute qualité (même nom de fichier).
 
-5. **Guide des tailles** : `SIZE_GUIDE` dans `assets/js/products.js` (mesures indicatives à vérifier).
+6. **Guide des tailles** : `SIZE_GUIDE` dans `assets/js/products.js` (mesures indicatives à vérifier).
 
 ### Ajouter un produit
 Ajoutez une ligne dans `PRODUCTS` (`assets/js/products.js`) et une photo `assets/img/products/<id>.jpg`.

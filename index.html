@@ -381,9 +381,11 @@
       <div class="drawer__foot">
         <div class="drawer__total"><span>Total estimé</span><strong id="cartTotal">—</strong></div>
         <label class="field"><span>Nom complet</span><input id="cName" autocomplete="name" placeholder="Votre nom"></label>
+        <label class="field"><span>Téléphone</span><input id="cPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 XX XX XX XX"></label>
         <label class="field"><span>Ville</span><input id="cCity" autocomplete="address-level2" placeholder="Votre ville"></label>
-        <button class="btn btn--dark btn--block" id="checkout">Envoyer la commande sur WhatsApp</button>
-        <p class="drawer__hint">Le prix final et le délai vous seront confirmés sur WhatsApp.</p>
+        <label class="field"><span>Adresse</span><input id="cAddress" autocomplete="street-address" placeholder="Quartier, rue, n°"></label>
+        <button class="btn btn--dark btn--block" id="checkout">Commander — paiement à la livraison</button>
+        <p class="drawer__hint" id="cartHint">Vous payez à la réception. La commande est envoyée sur WhatsApp pour confirmation.</p>
       </div>
     </aside>
   </div>

@@ -160,10 +160,27 @@
   $("#checkout").addEventListener("click", () => {
     if (!cart.length) return;
     const name = $("#cName").value.trim();
+    const phone = $("#cPhone").value.replace(/[\s.\-()]/g, "").replace(/^(\+212|00212)/, "0");
     const city = $("#cCity").value.trim();
+    const address = $("#cAddress").value.trim();
+    const hint = $("#cartHint");
+    if (!name || !/^0[5-7]\d{8}$/.test(phone) || !city || !address) {
+      hint.textContent = "Merci de remplir nom, téléphone (06/07…), ville et adresse.";
+      hint.classList.add("is-err");
+      return;
+    }
+    hint.classList.remove("is-err");
+    const d = new Date();
+    const ref = `JD-${String(d.getFullYear()).slice(2)}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
     const lines = cart.map((l) => { const p = byId(l.id); return `• ${p.name} — taille ${l.size} × ${l.qty}`; }).join("\n");
-    const msg = `Bonjour Joudy Design, je souhaite passer commande :\n\n${lines}\n\n${name ? `Nom : ${name}\n` : ""}${city ? `Ville : ${city}\n` : ""}Merci de me confirmer la disponibilité et le prix.`;
+    const msg = `🛍️ Nouvelle commande ${ref}\nPaiement à la livraison\n\n${lines}\n\nNom : ${name}\nTéléphone : ${phone}\nVille : ${city}\nAdresse : ${address}`;
+    if (CONFIG.orderEndpoint) {
+      const order = { ref, date: d.toISOString(), product: cart.map((l) => byId(l.id).name).join(" + "), size: cart.map((l) => l.size).join(" + "), qty: cart.reduce((n, l) => n + l.qty, 0), items: cart, name, phone, city, address, page: location.href };
+      fetch(CONFIG.orderEndpoint, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(order) }).catch(() => {});
+    }
     window.open(waLink(msg), "_blank", "noopener");
+    cart = []; save(); renderCart();
+    hint.textContent = `Merci ${name.split(" ")[0]} ! Commande ${ref} envoyée. Nous vous appelons pour confirmer.`;
   });
 
   /* ---------- Ajout rapide (modal) ---------- */

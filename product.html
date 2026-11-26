@@ -108,18 +108,98 @@
           <p class="pdp__error" id="sizeError" hidden>Veuillez choisir une taille.</p>
         </div>
 
-        <div class="pdp__buy">
+        <div class="pdp__qtyrow">
+          <span class="pdp__label-txt">Quantité</span>
           <div class="qty__ctrl">
             <button type="button" id="pMinus" aria-label="Diminuer la quantité">−</button>
             <output id="pQty">1</output>
             <button type="button" id="pPlus" aria-label="Augmenter la quantité">+</button>
           </div>
-          <button class="btn btn--dark" id="pAdd">Ajouter au panier</button>
         </div>
-        <a class="btn btn--ghost btn--block pdp__wa" id="pWa" href="#" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 12 20a8 8 0 0 1-4-1.1L4 20z"/></svg>
-          Commander directement sur WhatsApp
-        </a>
+
+        <!-- Formulaire COD -->
+        <div class="cod" id="cod">
+          <form class="cod__form" id="codForm" novalidate>
+            <div class="cod__head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h3"/></svg>
+              <div>
+                <h2>Commander maintenant</h2>
+                <p>Paiement à la livraison — remplissez le formulaire</p>
+              </div>
+            </div>
+
+            <label class="cfield">
+              <span>Nom complet <em aria-hidden="true">*</em></span>
+              <input name="name" id="codName" autocomplete="name" required placeholder="Ex. Salma Bennani">
+              <small class="cfield__err" hidden>Veuillez indiquer votre nom.</small>
+            </label>
+            <label class="cfield">
+              <span>Téléphone <em aria-hidden="true">*</em></span>
+              <input name="phone" id="codPhone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="06 XX XX XX XX">
+              <small class="cfield__err" hidden>Numéro marocain invalide (ex. 06 12 34 56 78).</small>
+            </label>
+            <div class="cod__row">
+              <label class="cfield">
+                <span>Ville <em aria-hidden="true">*</em></span>
+                <input name="city" id="codCity" list="cities" autocomplete="address-level2" required placeholder="Votre ville">
+                <small class="cfield__err" hidden>Veuillez indiquer votre ville.</small>
+              </label>
+              <label class="cfield">
+                <span>Taille <em aria-hidden="true">*</em></span>
+                <select name="size" id="codSize" required></select>
+                <small class="cfield__err" hidden>Choisissez une taille.</small>
+              </label>
+            </div>
+            <label class="cfield">
+              <span>Adresse de livraison <em aria-hidden="true">*</em></span>
+              <input name="address" id="codAddress" autocomplete="street-address" required placeholder="Quartier, rue, n°">
+              <small class="cfield__err" hidden>Veuillez indiquer votre adresse.</small>
+            </label>
+            <label class="cfield">
+              <span>Remarque <small>(facultatif)</small></span>
+              <textarea name="note" id="codNote" rows="2" placeholder="Mesures, couleur, horaire de livraison…"></textarea>
+            </label>
+
+            <div class="cod__sum">
+              <div><span id="codSumName"></span><span>× <b id="codSumQty">1</b></span></div>
+              <div><span>Livraison</span><span>[À CONFIRMER]</span></div>
+              <div class="cod__total"><span>Total</span><strong id="codTotal"></strong></div>
+            </div>
+
+            <button type="submit" class="btn btn--dark btn--block cod__submit" id="codSubmit">
+              Confirmer ma commande
+            </button>
+            <p class="cod__hint">Vous payez à la réception. Notre équipe vous appelle pour confirmer.</p>
+          </form>
+
+          <div class="cod__done" id="codDone" hidden tabindex="-1">
+            <div class="cod__check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+            <h2>Merci <span id="doneName"></span> !</h2>
+            <p id="doneText">Votre commande <strong id="doneRef"></strong> est prête. Nous vous contacterons au <strong id="donePhone"></strong> pour la confirmer.</p>
+            <a class="btn btn--wa btn--block" id="doneWa" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 12 20a8 8 0 0 1-4-1.1L4 20z"/></svg>
+              Confirmer aussi sur WhatsApp
+            </a>
+            <button type="button" class="link-btn" id="codAgain">Passer une autre commande</button>
+          </div>
+        </div>
+        <datalist id="cities">
+          <option value="Casablanca"><option value="Rabat"><option value="Marrakech"><option value="Fès"><option value="Tanger">
+          <option value="Agadir"><option value="Meknès"><option value="Oujda"><option value="Kénitra"><option value="Tétouan">
+          <option value="Salé"><option value="Témara"><option value="Mohammédia"><option value="El Jadida"><option value="Béni Mellal">
+          <option value="Nador"><option value="Safi"><option value="Khouribga"><option value="Settat"><option value="Laâyoune">
+        </datalist>
+
+        <div class="pdp__alt">
+          <span>ou</span>
+        </div>
+        <div class="pdp__buy">
+          <button class="btn btn--ghost" id="pAdd">Ajouter au panier</button>
+          <a class="btn btn--wa" id="pWa" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 12 20a8 8 0 0 1-4-1.1L4 20z"/></svg>
+            WhatsApp
+          </a>
+        </div>
 
         <ul class="pdp__trust">
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Livraison partout au Maroc</li>
@@ -190,7 +270,7 @@
   <!-- Barre d’achat mobile -->
   <div class="buybar" id="buybar" aria-hidden="true">
     <div><strong id="bbName"></strong><span id="bbPrice"></span></div>
-    <button class="btn btn--dark" id="bbAdd" tabindex="-1">Ajouter</button>
+    <button class="btn btn--dark" id="bbAdd" tabindex="-1">Commander</button>
   </div>
 
   <!-- Guide des tailles -->
@@ -275,9 +355,11 @@
       <div class="drawer__foot">
         <div class="drawer__total"><span>Total estimé</span><strong id="cartTotal">—</strong></div>
         <label class="field"><span>Nom complet</span><input id="cName" autocomplete="name" placeholder="Votre nom"></label>
+        <label class="field"><span>Téléphone</span><input id="cPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 XX XX XX XX"></label>
         <label class="field"><span>Ville</span><input id="cCity" autocomplete="address-level2" placeholder="Votre ville"></label>
-        <button class="btn btn--dark btn--block" id="checkout">Envoyer la commande sur WhatsApp</button>
-        <p class="drawer__hint">Le prix final et le délai vous seront confirmés sur WhatsApp.</p>
+        <label class="field"><span>Adresse</span><input id="cAddress" autocomplete="street-address" placeholder="Quartier, rue, n°"></label>
+        <button class="btn btn--dark btn--block" id="checkout">Commander — paiement à la livraison</button>
+        <p class="drawer__hint" id="cartHint">Vous payez à la réception. La commande est envoyée sur WhatsApp pour confirmation.</p>
       </div>
     </aside>
   </div>

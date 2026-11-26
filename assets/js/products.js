@@ -9,6 +9,12 @@ const CONFIG = {
   instagram: "https://www.instagram.com/joudy___design/",
   currency: "DH",
   sizes: ["S", "M", "L", "XL", "Sur mesure"],
+  // Formulaire COD : URL qui reçoit les commandes (ex. Google Apps Script → Google Sheets).
+  // Laisser vide ("") pour envoyer les commandes uniquement sur WhatsApp.
+  // Voir docs/google-sheets-commandes.md
+  orderEndpoint: "",
+  // Ouvrir WhatsApp automatiquement après la validation du formulaire COD
+  codOpenWhatsApp: true,
 };
 
 const CATEGORIES = [
